@@ -1,9 +1,11 @@
+const assert = require('chai').assert;
 const middle = require('../middle');
-const assertArraysEqual = require('../assertArraysEqual');
+const assertArraysEqual = require('../assertArraysEqual')
 
-
-const numbers = [1, 2, 3, 4, 5, 6];
-const numbers1 = [1, 2, 4, 5 , 6, 9];
-const middleNumbers = middle(numbers);
-assertArraysEqual(middleNumbers,[3,4])
-// Output: [3, 4]
+describe("#middle", () => {
+  it("returns middle number for odd array", () => {
+    const inputArray = [1, 2, 3, 4, 5];
+    const expectedOutput = [3];
+    assert.deepEqual(middle(inputArray), expectedOutput);
+  });
+});
